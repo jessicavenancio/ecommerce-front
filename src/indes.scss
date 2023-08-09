@@ -1,0 +1,66 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+@import "~bootstrap/scss/variables";
+
+$theme-colors: (
+    "primary": #00B894,
+    "warning": #100DD0,
+    "danger": #EA4D62
+);
+
+$theme-colors-text: (
+    "primary": #00B894
+);
+
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+
+@import "~bootstrap/scss/bootstrap";
+
+
+body{
+    margin-top: 100px;
+}
+
+.custom-form-group {
+    border-color: #00B894;
+}
+.btn-upload {
+    border-color: #00B894;
+    background-color: #00B894;
+    color: #ffffff;
+    border-radius: 5px 5px 5px 5px;
+}
+#btn-upload:hover{
+    border-color: #45CBB2;
+    background-color: #45CBB2;
+}
+.inputGroupPrepend {
+    background-color: #00B894;
+    border-color: #00B894;
+    color: #ffffff;
+    font-weight: bold;
+}
+#custom-form-group-input{
+    border-radius: 5px 5px 5px 5px;
+    border-color: #00B894;
+}
+
+.menu{
+    color:black !important;
+}
+.custom-button {
+    background-color: #00B894;
+    border-color: #00B894;
+    border-radius: 5px 5px 5px 5px;
+    color: white;
+  
+    &:hover,
+    &:focus {
+      background-color: #00A384;
+      border-color: #00A384;
+      color: #ffffff;
+      
+    }
+  }

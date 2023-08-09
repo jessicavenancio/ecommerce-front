@@ -1,0 +1,59 @@
+body {
+    background-color: light;
+  }
+
+.discount-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    height: 30px;
+    width: 40px;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 0 5px 0 0;
+    text-align: center;
+    line-height: 1;
+  }
+
+.flag {
+color: red;
+position: absolute;
+top: 30px;
+right: 0;
+border: solid;
+width: 40px;
+height: 10px;
+border-width: 8px 20px;
+border-bottom-color: transparent;
+}
+
+.novidades{
+    letter-spacing: 2px;
+}
+
+.categorias {
+  background-color: #45CBB2;
+  color:white ;
+}
+
+.categoriaLink {
+  margin-left: 10px;
+}
+
+.campo{
+  background-color: transparent !important;
+  border-right: none !important;
+  border-radius: 5px 0px 0px 5px !important;
+}
+
+.custom-search {
+  background-color: transparent !important;
+  border-left: none !important;
+  border-radius: 0px 5px 5px 0px !important;
+}
+.custom-search i {
+  color: #00B894;
+}
