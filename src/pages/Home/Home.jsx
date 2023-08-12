@@ -36,7 +36,7 @@ export function Home() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/produtos?page=${atualPage}&nome=${pesquisa}`)
+      .get(`https://e-commerce-server-ckvx.onrender.com/produtos?page=${atualPage}&nome=${pesquisa}`)
       .then((response) => {
         setProducts(response.data.content);
         setTotalPages(response.data.totalPages);
@@ -164,7 +164,7 @@ export function Home() {
                 <Card.Img
                   className="image p-3 rounded-5"
                   style={{ objectFit: "cover", aspectRatio: "1/1" }}
-                  src={`http://localhost:3001/${product.foto}`}
+                  src={`https://e-commerce-server-ckvx.onrender.com/${product.foto}`}
                 />
                 {product.desconto > 0 && product.dataDesconto > dataHoje ? (
                   <div>

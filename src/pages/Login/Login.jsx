@@ -33,7 +33,7 @@ export function Login() {
   function onSubmit(data) {
     // conexão com a rota de login
     axios
-      .post("http://localhost:3001/auth/login", data)
+      .post("https://e-commerce-server-ckvx.onrender.com/auth/login", data)
       .then((response) => {
         // se a resposta for 200, gera o token
         if (response.status === 200) {

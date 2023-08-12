@@ -40,7 +40,7 @@ export function EditaProd() {
     formData.append("quantidade", data.quantidade);
 
     axios
-      .put(`http://localhost:3001/produtos/${id}`, formData, {
+      .put(`https://e-commerce-server-ckvx.onrender.com/produtos/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${autenticacao.token}`,
         },
@@ -65,7 +65,7 @@ export function EditaProd() {
   }
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/produtos/${id}`).then((response) => {
+    axios.get(`https://e-commerce-server-ckvx.onrender.com/produtos/${id}`).then((response) => {
       const { nome, preco, descricao, desconto, categoria, quantidade } =
         response.data;
       reset({ nome, preco, descricao, desconto, categoria, quantidade });

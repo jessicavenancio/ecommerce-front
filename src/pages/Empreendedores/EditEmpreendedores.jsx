@@ -40,7 +40,7 @@ export function EditEmpreendedores() {
         formData.append("rua", data.rua);
         formData.append("numero", data.numero);
         axios
-            .put(`http://localhost:3001/empreendedores/${id}`, formData, {
+            .put(`https://e-commerce-server-ckvx.onrender.com/empreendedores/${id}`, formData, {
                 headers: {
                     Authorization: `Bearer ${autenticacao.token}`,
                 },
@@ -66,7 +66,7 @@ export function EditEmpreendedores() {
     }
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/empreendedores/${id}`).then((response) => {
+        axios.get(`https://e-commerce-server-ckvx.onrender.com/empreendedores/${id}`).then((response) => {
             const {
                 nome,
                 email,

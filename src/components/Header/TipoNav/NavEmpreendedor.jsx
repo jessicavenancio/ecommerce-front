@@ -24,7 +24,7 @@ export function NavEmpreendedor() {
     const autenticacao = Autenticacao()
     useEffect(() => {
         if (autenticacao) {
-            axios.get(`http://localhost:3001/empreendedores/${autenticacao.id}`)
+            axios.get(`https://e-commerce-server-ckvx.onrender.com/empreendedores/${autenticacao.id}`)
                 .then((response) => {
                     setNomeUsuario(response.data.nome.split(' ')[0])
                 })

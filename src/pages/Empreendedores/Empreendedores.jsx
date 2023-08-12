@@ -41,7 +41,7 @@ export function Empreendedores() {
   const onDelete = async () => {
     try {
       await axios.delete(
-        `http://localhost:3001/empreendedores/${idEmpreendedor}`,
+        `https://e-commerce-server-ckvx.onrender.com/empreendedores/${idEmpreendedor}`,
         {
           headers: {
             Authorization: `Bearer ${autenticacao.token}`,
@@ -77,7 +77,7 @@ export function Empreendedores() {
   async function initializeTable() {
     try {
       const response = await axios.get(
-        `http://localhost:3001/empreendedores?nome=${filtroNome}&page=${atualPage}&size=${10}`,
+        `https://e-commerce-server-ckvx.onrender.com/empreendedores?nome=${filtroNome}&page=${atualPage}&size=${10}`,
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

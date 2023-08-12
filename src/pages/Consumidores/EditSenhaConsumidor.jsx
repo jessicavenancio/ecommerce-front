@@ -32,7 +32,7 @@ export function EditSenhaConsumidor() {
 
   function onSubmit(data) {
     axios
-      .put(`http://localhost:3001/consumidores/senha/${id}`, data, {
+      .put(`https://e-commerce-server-ckvx.onrender.com/consumidores/senha/${id}`, data, {
         headers: {
           Authorization: `Bearer ${autenticacao.token}`,
         },
@@ -54,7 +54,7 @@ export function EditSenhaConsumidor() {
   }
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/consumidores/senha${id}`)
+      .get(`https://e-commerce-server-ckvx.onrender.com/consumidores/senha${id}`)
       .then((response) => {
         const { email, senha } = response.data;
         reset({ email, senha });

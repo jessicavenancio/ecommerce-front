@@ -41,7 +41,7 @@ export function ListaProdutosAdmin() {
 
     const buscarProd = (id) => {
         return axios
-            .get(`http://localhost:3001/produtos/${id}`)
+            .get(`https://e-commerce-server-ckvx.onrender.com/produtos/${id}`)
             .then((response) => {
                 return response.data;
             })
@@ -62,7 +62,7 @@ export function ListaProdutosAdmin() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/produtos?page=${atualPage}&size=${6}&nome=${pesquisa}`, {
+        axios.get(`https://e-commerce-server-ckvx.onrender.com/produtos?page=${atualPage}&size=${6}&nome=${pesquisa}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -78,7 +78,7 @@ export function ListaProdutosAdmin() {
     }, [atualPage, pesquisa]);
 
     useEffect(() => {
-        axios.get("http://localhost:3001/empreendedores", {
+        axios.get("https://e-commerce-server-ckvx.onrender.com/empreendedores", {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             },
@@ -95,7 +95,7 @@ export function ListaProdutosAdmin() {
     const onDelete = async () => {
         try {
             await axios.delete(
-                `http://localhost:3001/produtos/${idProduto}`,
+                `https://e-commerce-server-ckvx.onrender.com/produtos/${idProduto}`,
                 {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -120,7 +120,7 @@ export function ListaProdutosAdmin() {
     async function initializeTable() {
         try {
             await axios
-                .get(`http://localhost:3001/produtos`, {
+                .get(`https://e-commerce-server-ckvx.onrender.com/produtos`, {
                     headers: {
                         Authorization: `Bearer ${autenticacao.token}`,
                     }
@@ -243,7 +243,7 @@ export function ListaProdutosAdmin() {
                                                         <Card.Img
                                                             className="image p-3 rounded-5 w-50"
                                                             style={{ objectFit: 'cover', aspectRatio: '1/1', width: 'auto%', height: 'auto' }}
-                                                            src={`http://localhost:3001/${produto.foto}`}
+                                                            src={`https://e-commerce-server-ckvx.onrender.com/${produto.foto}`}
                                                         />
                                                     </Col>
                                                     <td className="align-middle">
@@ -331,7 +331,7 @@ export function ListaProdutosAdmin() {
                                 <Col>
                                     <Image
                                         className="p-3 rounded-5 w-100"
-                                        src={`http://localhost:3001/${selecionaProd.foto}`}
+                                        src={`https://e-commerce-server-ckvx.onrender.com/${selecionaProd.foto}`}
                                         alt="Imagem"
                                     />
                                 </Col>

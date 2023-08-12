@@ -131,7 +131,7 @@ export function NavConsumidor() {
 
     useEffect(() => {
         if (autenticacao) {
-            axios.get(`http://localhost:3001/consumidores/${autenticacao.id}`, {
+            axios.get(`https://e-commerce-server-ckvx.onrender.com/consumidores/${autenticacao.id}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 }
@@ -240,7 +240,7 @@ export function NavConsumidor() {
                                                         <Image
                                                             className="image w-100 rounded-2 mt-2"
                                                             style={{ objectFit: "cover", aspectRatio: "1/1" }}
-                                                            src={`http://localhost:3001/${item.produto.foto}`}
+                                                            src={`https://e-commerce-server-ckvx.onrender.com/${item.produto.foto}`}
                                                         />
                                                     </div>
                                                 </Col>

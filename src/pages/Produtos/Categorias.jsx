@@ -15,7 +15,7 @@ export function Categorias() {
 
     useEffect(() => {
         axios
-            .get(`http://localhost:3001/produtos?categoria=${categoria}&page=${atualPage}&nome=${pesquisa}&size=${8}`)
+            .get(`https://e-commerce-server-ckvx.onrender.com/produtos?categoria=${categoria}&page=${atualPage}&nome=${pesquisa}&size=${8}`)
             .then((response) => {
                 setProducts(response.data.content);
                 setTotalPages(response.data.totalPages);
@@ -89,7 +89,7 @@ export function Categorias() {
                                 <Card.Img
                                     className="image p-3 rounded-5"
                                     style={{ objectFit: 'cover', aspectRatio: '1/1' }}
-                                    src={`http://localhost:3001/${product.foto}`}
+                                    src={`https://e-commerce-server-ckvx.onrender.com/${product.foto}`}
                                 />
                                 {product.desconto > 0 ? (
                                     <div>

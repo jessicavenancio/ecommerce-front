@@ -55,7 +55,7 @@ export function Consumidores() {
 
     const onDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3001/consumidores/${idConsumidor}`, {
+            await axios.delete(`https://e-commerce-server-ckvx.onrender.com/consumidores/${idConsumidor}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 }
@@ -79,7 +79,7 @@ export function Consumidores() {
 
     async function initializeTable() {
         try {
-            const response = await axios.get(`http://localhost:3001/consumidores?nome=${filtroNome}&page=${atualPage}&size=${10}`, {
+            const response = await axios.get(`https://e-commerce-server-ckvx.onrender.com/consumidores?nome=${filtroNome}&page=${atualPage}&size=${10}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 }

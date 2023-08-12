@@ -10,7 +10,7 @@ export function Conta() {
     const autenticacao = Autenticacao();
 
     useEffect(() => {
-        axios.get(`http://localhost:3001/${autenticacao.tipo}es/${autenticacao.id}`, {
+        axios.get(`https://e-commerce-server-ckvx.onrender.com/${autenticacao.tipo}es/${autenticacao.id}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`,
             }
@@ -37,7 +37,7 @@ export function Conta() {
                                 <Card.Img
                                     className="w-25 p-3 rounded-circle"
                                     style={{ objectFit: 'cover', aspectRatio: '1/1' }}
-                                    src={usuario.foto ? `http://localhost:3001/${usuario.foto}` : 'http://localhost:3001/sacolinha.png'}
+                                    src={usuario.foto ? `https://e-commerce-server-ckvx.onrender.com/${usuario.foto}` : 'https://e-commerce-server-ckvx.onrender.com/sacolinha.png'}
                                     alt="Foto do usuário"
                                 />
                             </Card>
